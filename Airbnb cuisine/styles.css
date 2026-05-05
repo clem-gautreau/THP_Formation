@@ -1,0 +1,1112 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Limelight&display=swap');
+
+/*VARIABLES CSS (Root)*/
+:root {
+  /* Couleurs */
+  --color-primary-light: #00CED1;       /* Cyan clair */
+  --color-primary-dark: #00A5A7;        /* Cyan foncé */
+  --color-secondary-light: #FF8C00;     /* Orange */
+  --color-secondary-dark: #CC7000;      /* Orange foncé */
+  --color-tertiary-light: #FF6347;      /* Rouge tomate */
+  --color-tertiary-dark: #CC4F39;       /* Rouge tomate foncé */
+  --color-success-light: #AED75B;       /* Vert succès */
+  --color-success-dark: #9ACD32;        /* Vert succès foncé */
+  --color-warning-light: #FFD700;       /* Jaune avertissement */
+  --color-warning-dark: #CCAC00;        /* Jaune avertissement foncé */
+  --color-error-light: #FF0000;         /* Rouge erreur */
+  --color-error-dark: #CC0000;          /* Rouge erreur foncé */
+  --color-info-light: #F19FAF;          /* Rose info */
+  --color-info-dark: #D87093;           /* Rose info foncé */
+  --color-neutral-light: #c0c0c0;       /* Gris neutre clair */
+  --color-neutral-dark: #9a9a9a;        /* Gris neutre foncé */  
+  
+  /* Couleurs de texte et de surface */
+  --color-text: #1f2933;                /* Texte foncé */
+  --color-text-muted: #6b7280;          /* Texte gris */
+  --color-surface: #ffffff;             /* Fond blanc */
+  --color-border-light: #c0c0c0;        /* Bordure grise claire */
+  --color-border-dark: #9a9a9a;         /* Bordure grise foncée */
+
+  /* Espacements */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+  /* Bordures et ombres*/
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  /* Polices */
+  --font-main: 'Dosis', sans-serif;
+  --font-title: 'Limelight', serif;
+
+/* Tailles de police */
+--font-size-xs: 12px;
+--font-size-sm: 14px;
+--font-size-md: 16px;
+--font-size-lg: 24px;
+--font-size-xl: 32px;
+--font-size-2xl: 40px;
+--font-size-3xl: 48px;
+}
+
+/* =============================================
+   2. RESET & STYLES DE BASE
+   ============================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: #f3f4f6;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/* --- Introduction (Images de référence) --- */
+.images-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+  align-items: flex-start; /* Alignement en haut pour éviter les espaces vides */
+}
+
+.images-row img {
+  height: 180px; /* Hauteur fixe pour toutes les images */
+  width: auto; /* Largeur automatique pour conserver le ratio */
+  object-fit: cover; /* Remplit toute la hauteur en recadrant si nécessaire */
+  object-position: center; /* Centre l'image */
+  border-radius: var(--radius-lg);
+}
+
+/* =============================================
+   3. LAYOUT (Structure globale)
+   ============================================= */
+.container {
+  width: 100%;
+  max-width: 1080px; /* Largeur maximale pour les grands écrans */
+  margin: 0 auto; /* Centre le conteneur */
+  padding: 0 var(--spacing-md); /* Espacement latéral */
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-text);
+  padding: var(--spacing-xl) 0 var(--spacing-lg); /* Espacement vertical */
+  text-align: center; /* Centre le contenu */
+}
+
+.page-header h1 {
+  font-size: var(--font-size-3xl); 
+  margin-bottom: var(--spacing-sm); /* Espacement sous le titre */
+  font-weight: 700; /* Gras pour le titre principal */
+}
+
+.page-header .subtitle {
+  font-size: var(--font-size-base); /* 16px */
+  opacity: 0.9; /* Légère transparence pour un effet subtil */
+  max-width: 640px; /* Largeur maximale pour le texte */
+  margin: 0 auto; /* Centre le sous-titre */
+}
+
+main {
+  padding: var(--spacing-lg) 0; /* Espacement vertical pour le contenu principal */
+}
+
+.section {
+  background: var(--color-surface); /* Fond blanc */
+  border-radius: var(--radius-lg); /* Coins arrondis */
+  box-shadow: var(--shadow-sm); /* Ombre légère */
+  padding: var(--spacing-lg); /* Espacement intérieur */
+  margin-bottom: var(--spacing-lg); /* Espacement entre les sections */
+}
+.section h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section h5 {
+  font-size: var(--font-size-md);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section h6 {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md); /* Espacement sous le titre de section */
+  color: var(--color-text); /* Couleur du texte */
+}
+.section p {
+  color: var(--color-text-muted); /* Texte secondaire en gris */
+  margin-bottom: var(--spacing-md); /* Espacement sous le paragraphe */
+}
+.lead {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    font-weight: bold;
+  margin-bottom: var(--spacing-md); /* Espacement sous le lead */
+}
+.blockquote {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-left: 0;
+  margin-bottom: var(--spacing-md); /* Espacement sous la citation */
+}
+.font-small {
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.page-footer {
+  border-top: 1px solid var(--color-border); /* Bordure supérieure */
+  padding: var(--spacing-md) 0 var(--spacing-lg); /* Espacement vertical */
+  margin-top: var(--spacing-xl); /* Espacement avant le pied de page */
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text-muted); /* Texte gris */
+  text-align: center; /* Centre le texte */
+  background: #f9fafb; /* Fond très clair */
+}
+
+/* --- Couleurs --- */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Grille responsive */
+  gap: var(--spacing-md); /* Espacement entre les groupes de couleurs */
+  margin-top: var(--spacing-md);
+}
+
+.color-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes pour clair/foncé */
+  gap: var(--spacing-sm); /* Espacement entre les échantillons */
+  margin-bottom: var(--spacing-md);
+}
+
+.color-swatch {
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  color: #ffffff; /* Texte blanc pour contraster avec les fonds colorés */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligne le texte en bas */
+  min-height: 96px; /* Hauteur minimale pour uniformiser */
+  position: relative;
+  overflow: hidden; /* Masque les débordements */
+}
+
+.color-swatch::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Couvre tout l'élément */
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.25), transparent);
+  opacity: 0.6; /* Effet de dégradé subtil */
+}
+
+.color-swatch span {
+  position: relative;
+  z-index: 1; /* Place le texte au-dessus du dégradé */
+}
+
+.color-code {
+  font-size: var(--font-size-xs); /* 12px */
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.tone-label {
+  font-size: var(--font-size-xs); /* 12px */
+  opacity: 0.85;
+}
+
+/* Couleurs spécifiques (claires et foncées) */
+.primary-light { background: var(--color-primary-light); }
+.primary-dark { background: var(--color-primary-dark); }
+.secondary-light { background: var(--color-secondary-light); color: var(--color-text); }
+.secondary-dark { background: var(--color-secondary-dark); color: var(--color-text); }
+.tertiary-light { background: var(--color-tertiary-light); color: var(--color-text); }
+.tertiary-dark { background: var(--color-tertiary-dark); color: var(--color-text); }
+.success-light { background: var(--color-success-light); }
+.success-dark { background: var(--color-success-dark); }
+.warning-light { background: var(--color-warning-light); color: var(--color-text); }
+.warning-dark { background: var(--color-warning-dark); color: var(--color-text); }
+.error-light { background: var(--color-error-light); }
+.error-dark { background: var(--color-error-dark); }
+.info-light { background: var(--color-info-light); }
+.info-dark { background: var(--color-info-dark); }
+.neutral-light { background: var(--color-neutral-light); color: var(--color-text); }
+.neutral-dark { background: var(--color-neutral-dark); color: var(--color-text); }
+
+/* --- Boutons --- */
+.button-row {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
+  gap: var(--spacing-sm); /* Espacement entre les boutons */
+  margin-top: var(--spacing-sm);
+}
+
+.btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs); /* 4px */
+
+  /* Typographie */
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm); /* 14px */
+  font-weight: 500;
+  line-height: 1;
+
+  /* Apparence */
+  border-radius: var(--radius-full); /* Boutons "pill" (arrondis) */
+  border: 1px solid transparent;
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  cursor: pointer;
+  transition: all 0.15s ease; /* Animation fluide */
+}
+
+/* Tailles de boutons */
+.btn-small {
+  padding: 6px 12px;
+  font-size: var(--font-size-xs);
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: var(--font-size-md);
+}
+
+/* Boutons classiques */
+
+.btn-primary {
+  background: var(--color-primary-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  transform: translateY(-1px); /* Légère élévation au survol */
+}
+.btn-secondary {
+  background: var(--color-secondary-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-secondary-light);
+  transform: translateY(-1px);
+}
+.btn-tertiary {
+  background: var(--color-tertiary-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-tertiary:hover:not(:disabled) {
+  background: var(--color-tertiary-light);
+  transform: translateY(-1px);
+}   
+.btn-success {
+  background: var(--color-success-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-success:hover:not(:disabled) {
+  background: var(--color-success-light);
+  transform: translateY(-1px);
+}   
+.btn-warning {
+  background: var(--color-warning-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-warning:hover:not(:disabled) {
+  background: var(--color-warning-light);
+  transform: translateY(-1px);
+}
+.btn-error {
+  background: var(--color-error-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-error:hover:not(:disabled) {
+  background: var(--color-error-light);
+  transform: translateY(-1px);
+}
+.btn-info {
+  background: var(--color-info-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-info:hover:not(:disabled) {
+  background: var(--color-info-light);
+  transform: translateY(-1px);
+}
+.btn-neutral {
+  background: var(--color-neutral-dark);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-neutral:hover:not(:disabled) {
+  background: var(--color-neutral-light);
+  transform: translateY(-1px);
+}
+/* Boutons outlines */
+.btn-primary-ghost {
+  background: transparent;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-dark);
+}
+.btn-primary-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+.btn-secondary-ghost {
+  background: transparent;
+  color: var(--color-secondary-dark);
+  border: 1px solid var(--color-secondary-dark);
+}
+.btn-secondary-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+.btn-tertiary-ghost {
+  background: transparent;
+  color: var(--color-tertiary-dark);
+  border: 1px solid var(--color-tertiary-dark);
+}
+.btn-tertiary-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+.btn-success-ghost {
+  background: transparent;
+  color: var(--color-success-dark);
+  border: 1px solid var(--color-success-dark);
+}
+.btn-success-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+.btn-warning-ghost {
+  background: transparent;
+  color: var(--color-warning-dark);
+  border: 1px solid var(--color-warning-dark);
+}
+.btn-warning-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */  
+}
+.btn-error-ghost {
+  background: transparent;
+  color: var(--color-error-dark);
+  border: 1px solid var(--color-error-dark);
+}
+.btn-error-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+.btn-info-ghost {
+  background: transparent;
+  color: var(--color-info-dark);
+  border: 1px solid var(--color-info-dark);
+}
+.btn-info-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */  
+}
+.btn-neutral-ghost {
+  background: transparent;
+  color: var(--color-neutral-dark);
+  border: 1px solid var(--color-neutral-dark);
+}
+.btn-neutral-ghost:hover:not(:disabled) {
+  background: #F0F8FF; /* Fond semi-transparent au survol */
+}
+
+
+/* --- Formulaires --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Grille responsive */
+  gap: var(--spacing-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs); /* 4px */
+  margin-bottom: var(--spacing-md);
+}
+
+.form-field label {
+  font-size: var(--font-size-sm); /* 14px */
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Styles pour les inputs, select et textarea */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  border-radius: var(--radius-sm); /* 4px */
+  border: 1px solid var(--color-border-dark);
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  font-size: var(--font-size-sm); /* 14px */
+  font-family: inherit; /* Utilise la police du parent */
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background: var(--color-surface);
+}
+
+/* Effet de focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 1px rgba(0, 206, 209, 0.25); /* Lueur bleue au focus */
+}
+
+/* États spécifiques pour textarea */
+.in-progress {
+  border-color: var(--color-warning-dark);
+  background: #fff9f0; /* Fond jaune très clair */
+}
+
+.completed {
+  border-color: var(--color-success-dark);
+  background: #f0fdf4; /* Fond vert très clair */
+}
+/* --- Radio Buttons --- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs); /* 4px */
+  margin-top: var(--spacing-xs);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm); /* 8px */
+  cursor: pointer;
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text);
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0; /* Cache l'input natif */
+  width: 0;
+  height: 0;
+}
+
+.radio-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%; /* Cercle pour le radio button */
+  background: var(--color-surface);
+  transition: all 0.15s ease;
+}
+
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary-dark);
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.15s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  opacity: 1; /* Affiche le point quand coché */
+}
+
+.radio-label:hover .radio-custom {
+  border-color: var(--color-primary-dark); /* Bordure bleue au survol */
+}
+
+/* --- Checkboxes --- */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs); /* 4px */
+  margin-top: var(--spacing-xs);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm); /* 8px */
+  cursor: pointer;
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text);
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; /* Cache l'input natif */
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm); /* 4px (coins légèrement arrondis) */
+  background: var(--color-surface);
+  transition: all 0.15s ease;
+}
+
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.15s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  opacity: 1; /* Affiche la coche quand coché */
+  border-color: var(--color-primary-dark); /* Coche bleue */
+}
+
+.checkbox-label:hover .checkbox-custom {
+  border-color: var(--color-primary-dark); /* Bordure bleue au survol */
+}
+
+/* --- États des checkboxes/radio buttons --- */
+/* Style pour les champs désactivés */
+.radio-label:has(input[type="radio"]:disabled) .radio-custom,
+.checkbox-label:has(input[type="checkbox"]:disabled) .checkbox-custom {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio-label:has(input[type="radio"]:disabled) .radio-custom::after,
+.checkbox-label:has(input[type="checkbox"]:disabled) .checkbox-custom::after {
+  opacity: 0.3;
+}
+
+/* --- Avatars --- */
+.avatar-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-top: var(--spacing-md);
+}
+
+.avatar {
+  border-radius: 50%; /* Cercle parfait */
+  overflow: hidden; /* Masque les débordements */
+  border: 2px solid var(--color-border);
+  display: inline-flex; /* Pour centrer l'image */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit tout l'espace */
+}
+
+.avatar-small {
+  width: 48px;
+  height: 48px;
+}
+
+.avatar-large {
+  width: 96px;
+  height: 96px;
+}
+
+/* --- Cartes --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Grille responsive */
+  gap: var(--spacing-md);
+  grid-auto-rows: auto; /* Les lignes s'adaptent au contenu */
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg); /* 8px */
+  border: 2px solid var(--color-primary-dark);
+  padding: auto;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: var(--spacing-md) 0; /* Espacement vertical */
+}
+
+.card h4 {
+  margin: var(--spacing-md) var(--spacing-md) 0; /* Espacement en haut et latéral */
+  font-size: var(--font-size-base); /* 16px */
+}
+
+.card p {
+  margin: var(--spacing-md) var(--spacing-md) 0; /* Espacement en haut et latéral */
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* --- Cartes avec image --- */
+.card-image {
+  padding: 0; /* Supprime le padding pour coller à l'image */
+  border: 2px solid var(--color-secondary-dark);
+}
+
+.card-image img {
+  width: 100%; /* Remplit toute la largeur */
+  height: 120px; /* Hauteur fixe pour l'image */
+  object-fit: cover; /* Remplit tout l'espace en recadrant si nécessaire */
+  display: block; /* Évite les espaces indésirables sous l'image */
+}
+
+.card-content {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+/* =============================================
+   CARTES - BARRE DE NAVIGATION AVEC ONGLETS
+   ============================================= */
+
+.card-nav-tabs {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg); /* 8px */
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-lg); /* Espacement en bas */
+  position: sticky;
+  top: 0; /* Colle en haut de la page */
+  z-index: 100; /* Au-dessus des autres éléments */
+}
+
+/* Conteneur des onglets */
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  background: var(--color-neutral-light); /* Fond gris clair pour les onglets */
+  border-bottom: 1px solid var(--color-primary-dark); /* Séparation avec le nom du site */
+  padding: 0 var(--spacing-sm); /* Espacement latéral */
+}
+
+/* Style des onglets */
+.nav-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm); /* 14px */
+  font-weight: 500;
+  border-radius: var(--radius-md) var(--radius-md) 0 0; /* Coins arrondis en haut */
+  margin-right: var(--spacing-xs); /* 4px entre les onglets */
+  transition: all 0.15s ease;
+  border: 1px solid var(--color-primary-dark);
+  border-bottom: none;
+  background: transparent;
+}
+
+/* Onglet actif */
+.nav-tab.active {
+  background: var(--color-surface); /* Fond blanc */
+  color: var(--color-text);
+  border-color: var(--color-primary-dark);
+  border-bottom-color: var(--color-surface); /* Masque la bordure en bas */
+  font-weight: 600;
+}
+
+/* Effet de survol */
+.nav-tab:hover:not(.active) {
+  background: rgba(0, 0, 0, 0.05); /* Fond légèrement plus foncé */
+  color: var(--color-text);
+}
+
+/* Nom du site (en dessous des onglets) */
+.site-title {
+  padding: var(--spacing-md) var(--spacing-lg); /* 16px 24px */
+  background: var(--color-primary-dark);
+}
+
+.site-title h1 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: var(--font-size-xl); /* 20px */
+  font-weight: 400;
+  color: var(--color-surface);
+}
+
+/* =============================================
+   CARTES - FICHE RECETTE
+   ============================================= */
+
+/* Conteneur principal */
+.recipe-card {
+  max-width: 600px; /* Largeur maximale pour une fiche recette */
+  margin: var(--spacing-lg) auto; /* Centre la carte */
+  overflow: hidden;
+  border: 2px solid var(--color-info-dark);
+}
+
+/* Image de la recette */
+.recipe-image-container {
+  position: relative; /* Pour positionner le badge */
+  height: 200px; /* Hauteur fixe pour l'image */
+  overflow: hidden; /* Masque les débordements */
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit tout l'espace */
+  display: block;
+}
+
+.recipe-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: var(--color-info-dark);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* Contenu principal */
+.recipe-content {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Titre + métadonnées */
+.recipe-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.recipe-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: var(--font-size-2xl); /* 24px */
+  color: var(--color-text-muted);
+  background: var(--color-info-dark);
+  padding: var(--spacing-md) var(--spacing-md);
+  border-radius: var(--radius-lg);
+}
+
+.recipe-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap; /* Permet le retour à la ligne sur mobile */
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Espacement entre l'icône et le texte */
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.meta-icon {
+  font-size: var(--font-size-md); /* 16px */
+}
+
+.meta-text {
+  font-size: var(--font-size-sm); /* 14px */
+}
+
+/* Description */
+.recipe-description {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Sections (Ingrédients, Étapes) */
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: var(--font-size-lg); /* 18px */
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs);
+}
+
+/* Liste des ingrédients (réutilisation de group-list) */
+/* Les styles pour .group-list, .group-list-item, etc. sont déjà définis précédemment */
+
+/* Étapes de préparation */
+.recipe-steps {
+  padding-left: var(--spacing-md);
+  margin: 0;
+  list-style: none; /* Supprime les puces par défaut */
+}
+
+.recipe-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recipe-step:last-child {
+  border-bottom: none; /* Pas de bordure pour la dernière étape */
+  margin-bottom: 0;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--color-info-light);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  flex-shrink: 0; /* Empêche le numéro de rétrécir */
+}
+
+.step-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Boutons d'action */
+.recipe-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.btn-icon {
+  font-size: var(--font-size-base); /* 16px */
+}
+
+.btn-text {
+  font-size: var(--font-size-sm); /* 14px */
+}
+/* --- Cartes - Fiche produit (ex: carte de prix) --- */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px; /* Même padding pour les deux éléments */
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--color-success-dark);
+  border-radius: var(--radius-lg);
+  gap: 12px; /* Espace entre les éléments */
+}
+.price-tag {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-success-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Pour que le texte soit visible sur fond vert */
+  margin: 0 auto 16px; /* Centrer horizontalement et espace en bas */
+}
+/* --- Listes --- */
+/* =============================================
+   4. COMPOSANTS - GROUP-LIST (avec cases à cocher)
+   ============================================= */
+
+.group-list {
+  background: var(--color-surface); /* Fond blanc */
+  border-radius: var(--radius-md); /* 6px */
+  border: 1px solid var(--color-info-dark);
+  box-shadow: var(--shadow-sm); /* Ombre légère */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.group-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md); /* Espacement entre la checkbox et le texte */
+  padding: var(--spacing-md); /* 16px */
+  border-bottom: 1px solid var(--color-info-dark);
+  transition: background 0.15s ease;
+}
+
+.group-list-item:last-child {
+  border-bottom: none;
+}
+
+.group-list-item:hover {
+  background: #f3f4f6; /* Fond gris très clair au survol */
+}
+
+/* Texte dans la liste */
+.group-list-text {
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text);
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Checkbox dans la liste (réutilisation des styles existants) */
+.group-list-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm); /* 4px */
+  background: var(--color-surface);
+  transition: all 0.15s ease;
+  flex-shrink: 0; /* Empêche la checkbox de rétrécir */
+}
+
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.group-list-checkbox:checked + .checkbox-custom::after {
+  opacity: 1;
+  border-color: var(--color-primary-dark);
+}
+
+.checkbox-label:hover .checkbox-custom {
+  border-color: var(--color-primary-dark);
+}
+
+/* Style pour le label de la checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0; /* Supprime le padding par défaut */
+  margin: 0; /* Supprime la marge par défaut */
+}
+/* --- Iconographie (avec Grid) --- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Auto-fill pour remplir la ligne */
+  gap: var(--spacing-md); /* Espacement entre les icônes */
+  margin-top: var(--spacing-md);
+  align-items: start; /* Alignement en haut */
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs); /* 4px */
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl); /* 20px */
+}
+
+.icon-label {
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.icon-container > div > span {
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-text-muted);
+  text-align: center;
+}

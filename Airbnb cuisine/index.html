@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Kit – Page de présentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1>Design System – Airbnb de la cuisine</h1>
+      <p class="subtitle">
+        Guide de présentation de l’interface utilisateur : couleurs, typographie, composants et exemples.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 1. Introduction -->
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>Ce design system est basé sur l'image de référence ci-dessous : La cuisine design des années 50 avec en contrepoint de la ménagère de l'époque la pop culture de la pin-up</p>
+        <div class="images-row">
+          <img src="ref cuisine 2.avif" alt="Image de référence : cuisine design des années 50 avec une pin-up">
+          <img src="pin-up 1.jpg" alt="Image de référence : pin-up des années 50">
+        </div>
+    </section>
+
+    <!-- 2. Couleurs -->
+    <section class="section">
+  <h2>Couleurs</h2>
+  <p>Palette principale avec ton majeur et ton foncé.</p>
+
+  <div class="color-grid">
+    <!-- Primaire -->
+    <div>
+        <div class="color-title">Primaire</div>
+      <div class="color-pair">
+        <div class="color-swatch primary-light">
+        <span class="color-code">#00CED1</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch primary-dark">
+        <span class="color-code">#00A5A7</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+    </div>
+    <!-- Secondaire -->
+    <div>
+        <div class="color-title">Secondaire</div>
+        <div class="color-pair">
+      <div class="color-swatch secondary-light">
+        <span class="color-code">#FF8C00</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch secondary-dark">
+        <span class="color-code">#CC7000</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+    </div>
+
+    <!-- Tertiaire -->
+    <div>
+        <div class="color-title">Tertiaire</div>
+        <div class="color-pair">
+      <div class="color-swatch tertiary-light">
+        <span class="color-code">#FF6347</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch tertiary-dark">
+        <span class="color-code">#CC4F39</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+    </div>
+    <!-- États -->
+    <div>
+        <div class="color-title">Succès</div>
+        <div class="color-pair">
+      <div class="color-swatch success-light">
+        <span class="color-code">#66CDAA</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch success-dark">
+        <span class="color-code">#52A488</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+  </div>
+    <div>
+        <div class="color-title">Avertissement</div>
+        <div class="color-pair">
+      <div class="color-swatch warning-light">
+        <span class="color-code">#FFD700</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch warning-dark">
+        <span class="color-code">#CCAC00</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+</div>
+    <div>
+        <div class="color-title">Erreur</div>
+        <div class="color-pair">
+      <div class="color-swatch error-light">
+        <span class="color-code">#FF4500</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch error-dark">
+        <span class="color-code">#CC3700</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+</div>  
+    <div>
+        <div class="color-title">Info</div>
+        <div class="color-pair">
+      <div class="color-swatch info-light">
+        <span class="color-code">#FFC0CB</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch info-dark">
+        <span class="color-code">#F19FAF</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+</div>
+
+     <div>
+        <div class="color-title">Neutre</div>
+        <div class="color-pair">
+      <div class="color-swatch neutral-light">
+        <span class="color-code">#C0C0C0</span>
+        <span class="tone-label">Clair</span>
+      </div>
+      <div class="color-swatch neutral-dark">
+        <span class="color-code">#9a9a9a</span>
+        <span class="tone-label">Foncé</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+    <!-- 3. Typographie -->
+<section class="section">
+  <h2>Typographie</h2>
+  <p>Polices utilisées dans l’interface.</p>
+
+  <div>
+    <h1>Titre H1 – Limelight - 48px</h1>
+    <h2>Titre H2 – Limelight - 40px</h2>
+    <h3>Titre H3 – Limelight - 32px</h3>
+    <h4>Titre H4 – Limelight - 24px</h4>
+    <h5>Titre H5 – Limelight - 20px</h5>
+    <h6>Titre H6 – Limelight - 18px</h6>
+  </div>
+
+  <div>
+    <p>
+      Texte courant – Dosis Regular - 16px.  
+    </p>
+    <p class="lead">
+      Texte plus important – Dosis Bold - 16px.
+    </p>
+    <blockquote class="blockquote">
+      Voici une citation inspirante – Dosis Italic - 16px.
+    </blockquote>
+  </div>
+</section>
+
+    <!-- 4. Composants UI -->
+<section id="components" class="section">
+  <h2>Composants UI</h2>
+
+  <!-- Boutons -->
+  <article class="subsection">
+    <h3>Boutons</h3>
+
+    <h4>Classiques</h4>
+    <div class="button-row">
+      <button class="btn btn-primary">Primaire</button>
+      <button class="btn btn-secondary">Secondaire</button>
+        <button class="btn btn-tertiary">Tertiaire</button>
+        <button class="btn btn-success">Succès</button>
+        <button class="btn btn-warning">Avertissement</button>
+        <button class="btn btn-error">Erreur</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-neutral">Neutre</button>
+    </div>
+
+    <h4>Outlines</h4>
+    <div class="button-row">
+      <button class="btn btn-primary-ghost">Primaire</button>
+      <button class="btn btn-secondary-ghost">Secondaire</button>
+        <button class="btn btn-tertiary-ghost">Tertiaire</button>
+        <button class="btn btn-success-ghost">Succès</button>
+        <button class="btn btn-warning-ghost">Avertissement</button>
+        <button class="btn btn-error-ghost">Erreur</button>
+        <button class="btn btn-info-ghost">Info</button>
+        <button class="btn btn-neutral-ghost">Neutre</button>
+    </div>
+
+    <h4>Tailles</h4>
+    <div class="button-row">
+      <button class="btn btn-primary btn-small"><span>Primaire</span></button>
+      <button class="btn btn-primary btn-large"><span>Primaire</span></button>
+    </div>
+  </article>
+
+  <!-- Formulaires -->
+  <article class="subsection">
+    <h3>Champs de formulaire</h3>
+
+    <div class="form-grid">
+
+      <!-- Default -->
+      <div class="form-field">
+        <label>Input texte</label>
+        <input type="text" placeholder="Votre texte ici">
+      </div>
+
+      <!-- Password -->
+      <div class="form-field">
+        <label>Mot de passe</label>
+        <input type="password" placeholder="••••••••">
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-field">
+        <label>Dropdown</label>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+
+      <!-- Search bar -->
+      <div class="form-field">
+        <label>Recherche</label>
+        <div>
+          <span class="icon">🔍</span>
+          <input type="text" placeholder="Rechercher...">
+        </div>
+      </div>
+
+      <!-- Localisation -->
+      <div class="form-field">
+        <label>Localisation</label>
+        <div>
+          <span class="icon">📍</span>
+          <input type="text" placeholder="Votre position">
+        </div>
+      </div>
+
+      <!-- Date picker -->
+      <div class="form-field">
+        <label>Date</label>
+        <input type="date">
+      </div>
+    <!-- Radio Buttons -->
+<div class="form-field">
+  <label>Choix unique</label>
+  <div class="radio-group">
+    <label class="radio-label">
+      <input type="radio" name="choice" checked>
+      <span class="radio-custom"></span>
+      Option 1
+    </label>
+    <label class="radio-label">
+      <input type="radio" name="choice">
+      <span class="radio-custom"></span>
+      Option 2
+    </label>
+    <label class="radio-label">
+      <input type="radio" name="choice">
+      <span class="radio-custom"></span>
+      Option 3
+    </label>
+  </div>
+</div>
+
+<!-- Checkboxes -->
+<div class="form-field">
+  <label>Choix multiples</label>
+  <div class="checkbox-group">
+    <label class="checkbox-label">
+      <input type="checkbox" checked>
+      <span class="checkbox-custom"></span>
+      Case 1
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom"></span>
+      Case 2
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom"></span>
+      Case 3
+    </label>
+  </div>
+</div>
+  </article>
+
+<!-- AVATARS -->
+<article class="subsection">
+  <h3>Avatars</h3>
+  <div class="avatar-row">
+    <div class="avatar avatar-small">
+      <img src="avatar.jpg" alt="Avatar small">
+    </div>
+
+    <div class="avatar avatar-large">
+      <img src="avatar.jpg" alt="Avatar large">
+    </div>
+  </div>
+</article>
+
+</section>
+
+<section class="section">
+      <h2>Eléments UI</h2>
+
+      <!-- Cartes -->
+      <article class="subsection">
+        <h3>Cartes</h3>
+        <p>Exemples de cartes avec contenu et actions.</p>
+        <!-- Barre de navigation avec onglets et nom du site -->
+<div class="card card-nav-tabs">
+  <!-- Onglets (comme un classeur) -->
+  <div class="nav-tabs">
+    <a href="#introduction" class="nav-tab active">Introduction</a>
+    <a href="#colors" class="nav-tab">Couleurs</a>
+    <a href="#typography" class="nav-tab">Typographie</a>
+    <a href="#components" class="nav-tab">Composants</a>
+    <a href="#elements" class="nav-tab">Éléments UI</a>
+  </div>
+
+  <!-- Nom du site (en dessous des onglets, à gauche) -->
+  <div class="site-title">
+    <h1>Airbnb de la cuisine</h1>
+  </div>
+</div>
+    <div class="card-grid">
+            <!-- Carte simple -->
+          <div class="card card-content">
+            <h4>Carte simple</h4>
+            <p>
+              Texte descriptif court pour présenter un contenu, un service ou une fonctionnalité.
+            </p>
+            <button class="btn btn-primary">En savoir plus</button>
+          </div>
+              <!-- Carte avec image -->
+          <div class="card card-image">
+              <h4>Carte avec image</h4>
+            <img src="ustensiles vintage.jpg" alt="Description de l'image">
+            <div class="card-content">
+               <p>
+                Variante de carte incluant une image ou une illustration en en-tête.
+              </p>
+              <button class="btn btn-secondary">Action principale</button>
+            </div>
+            </div>
+            <!-- Carte avec prix -->
+            <div class="card card-content price-card">
+                <div class="header">
+                    <h3>Cours de cuisine</h3>
+                    <div class="avatar avatar-small">
+                    <img src="avatar.jpg" alt="Avatar du chef">
+                    </div>
+                </div> 
+                <div class="price-tag">€50</div>
+                <p> Texte descriptif court pour présenter un contenu, un service ou une fonctionnalité. </p>
+                <button class="btn btn-success">Je réserve</button>
+            </div>
+    </div>
+    <!-- Fiche recette -->
+    <div class="card recipe-card">
+        <!-- Image de la recette -->
+        <div class="recipe-image-container">
+        <img src="tarte aux pommes.avif" alt="Tarte aux pommes" class="recipe-image">
+        <span class="recipe-badge">🍏 Dessert</span> <!-- Badge pour la catégorie -->
+        </div>
+        <!-- Contenu principal -->
+        <div class="recipe-content">
+            <!-- Titre + métadonnées -->
+            <div class="recipe-header">
+            <h3 class="recipe-title">Tarte aux pommes</h3>
+                <div class="recipe-meta">
+                <span class="meta-item">
+                    <span class="meta-icon">⏱️</span>
+                    <span class="meta-text">45 min</span>
+                </span>
+                <span class="meta-item">
+                    <span class="meta-icon">👩‍🍳</span>
+                    <span class="meta-text">Facile</span>
+                </span>
+                <span class="meta-item">
+                    <span class="meta-icon">🍽️</span>
+                    <span class="meta-text">6 personnes</span>
+                </span>
+                </div>
+            </div>
+            <!-- Description -->
+            <p class="recipe-description">Une délicieuse tarte aux pommes maison, parfaite pour le goûter ou le dessert. Recette traditionnelle revisitée avec une touche moderne. </p>
+            <!-- Ingrédients (avec cases à cocher) -->
+            <div class="recipe-section">
+            <h4 class="section-title">Ingrédients</h4>
+                <div class="group-list">
+                    <div class="group-list-item">
+                        <label class="checkbox-label">
+                        <input type="checkbox" class="group-list-checkbox">
+                        <span class="checkbox-custom"></span>
+                        </label>
+                        <span class="group-list-text">250g de farine</span>
+                    </div>
+                    <div class="group-list-item">
+                        <label class="checkbox-label">
+                        <input type="checkbox" class="group-list-checkbox">
+                        <span class="checkbox-custom"></span>
+                        </label>
+                        <span class="group-list-text">125g de beurre</span>
+                    </div>
+                    <div class="group-list-item">
+                        <label class="checkbox-label">
+                        <input type="checkbox" class="group-list-checkbox">
+                        <span class="checkbox-custom"></span>
+                        </label>
+                        <span class="group-list-text">4 pommes</span>
+                    </div>
+                    <div class="group-list-item">
+                        <label class="checkbox-label">
+                        <input type="checkbox" class="group-list-checkbox">
+                        <span class="checkbox-custom"></span>
+                        </label>
+                        <span class="group-list-text">100g de sucre</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Étapes de préparation -->
+            <div class="recipe-section">
+            <h4 class="section-title">Étapes</h4>
+                <ol class="recipe-steps">
+                    <li class="recipe-step">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Préchauffez le four à 180°C.</span>
+                    </li>
+                    <li class="recipe-step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Étalez la pâte dans un moule à tarte.</span>
+                    </li>
+                    <li class="recipe-step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Épluchez et coupez les pommes en fines tranches.</span>
+                    </li>
+                    <li class="recipe-step">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Disposez les pommes sur la pâte et saupoudrez de sucre.</span>
+                    </li>
+                    <li class="recipe-step">
+                    <span class="step-number">5</span>
+                    <span class="step-text">Enfournez pendant 30-40 minutes.</span>
+                    </li>
+                </ol>
+            </div>
+            <!-- Boutons d'action -->
+            <div class="recipe-actions">
+                <button class="btn btn-small btn-info-ghost">
+                <span class="btn-icon">♡</span>
+                <span class="btn-text">Ajouter aux favoris</span>
+                </button>
+                <button class="btn btn-small btn-info">
+                <span class="btn-icon">📄</span>
+                <span class="btn-text">Imprimer</span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+      </article>
+
+<!-- Liste de courses avec cases à cocher -->
+<article class="subsection">
+  <h3>Liste de courses</h3>
+  <div class="group-list">
+    <!-- Item 1 -->
+    <div class="group-list-item">
+      <label class="checkbox-label">
+        <input type="checkbox" class="group-list-checkbox">
+        <span class="checkbox-custom"></span>
+      </label>
+      <span class="group-list-text">Farine</span>
+    </div>
+    <!-- Item 2 -->
+    <div class="group-list-item">
+      <label class="checkbox-label">
+        <input type="checkbox" class="group-list-checkbox">
+        <span class="checkbox-custom"></span>
+      </label>
+      <span class="group-list-text">Œufs</span>
+    </div>
+    <!-- Item 3 -->
+    <div class="group-list-item">
+      <label class="checkbox-label">
+        <input type="checkbox" class="group-list-checkbox">
+        <span class="checkbox-custom"></span>
+      </label>
+      <span class="group-list-text">Lait</span>
+    </div>
+    <!-- Item 4 -->
+    <div class="group-list-item">
+      <label class="checkbox-label">
+        <input type="checkbox" class="group-list-checkbox" checked>
+        <span class="checkbox-custom"></span>
+      </label>
+      <span class="group-list-text">Sucre</span>
+    </div>
+  </div>
+</article>
+    </section>
+
+<!-- 5. Iconographie -->
+<section id="iconography" class="section">
+  <h2>Iconographie</h2>
+  <p>Icônes utilisées dans l’interface.</p>
+<div class="icon-grid">
+    <div class="icon-item">
+      <div class="icon-circle">🍽️</div>
+      <span class="icon-label">Repas</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">👐</div>
+      <span class="icon-label">A partager</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🔪</div>
+      <span class="icon-label">Ustensiles</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">⭐</div>
+      <span class="icon-label">Favoris</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">📍</div>
+      <span class="icon-label">Localisation</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🔍</div>
+      <span class="icon-label">Recherche</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">💗</div>
+      <span class="icon-label">Cœur</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🥬</div>
+      <span class="icon-label">Végétarien</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🥩</div>
+      <span class="icon-label">Viande</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🐟</div>
+      <span class="icon-label">Poisson</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🍰</div>
+      <span class="icon-label">Dessert</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">☕</div>
+      <span class="icon-label">Boissons</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🌶️</div>
+      <span class="icon-label">Épicé</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">🍸</div>
+      <span class="icon-label">Cocktails</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle">⚠️</div>
+      <span class="icon-label">Allergènes</span>
+    </div>
+</div>
+</div>
+</section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p>Design System – Airbnb de la cuisine · Version 1.0</p>
+    </div>
+  </footer>
+</body>
+</html>
