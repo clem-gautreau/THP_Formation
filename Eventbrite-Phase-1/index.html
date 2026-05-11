@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit UI - Concours Dessin</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Thème Sketchy -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Ton CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles spécifiques pour la page du kit UI */
+    .kit-section {
+      margin-bottom: 4rem;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .kit-section h2 {
+      font-family: 'Patrick Hand', cursive;
+      color: #FF6B35;
+      border-bottom: 2px solid #FF6B35;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .kit-section .subtitle {
+      font-family: 'Open Sans', sans-serif;
+      color: #7F8C8D;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .atom-example {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .atom-title {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: #2C3E50;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar (optionnel, pour naviguer dans le kit) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="font-family: 'Patrick Hand', cursive; color: #FF6B35; font-size: 1.8rem;">
+        <i class="fas fa-palette mr-2"></i> Kit UI - Concours Dessin
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Section : Boutons -->
+    <div class="kit-section">
+      <h2>Boutons</h2>
+      <p class="subtitle">Différents styles de boutons pour ton site.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Boutons principaux</h4>
+            <button class="btn btn-primary mr-2" style="background-color: #FF6B35; border: none;">Primary</button>
+            <button class="btn btn-secondary mr-2">Secondary</button>
+            <button class="btn btn-outline-primary mr-2" style="color: #FF6B35; border-color: #FF6B35;">Outline Primary</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Boutons avec icônes</h4>
+            <button class="btn btn-primary mr-2" style="background-color: #FF6B35; border: none;">
+              <i class="fas fa-paint-brush mr-2"></i> Participer
+            </button>
+            <button class="btn btn-outline-primary mr-2" style="color: #FF6B35; border-color: #FF6B35;">
+              <i class="fas fa-arrow-right mr-2"></i> Voir plus
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Formulaires -->
+    <div class="kit-section">
+      <h2>Formulaires</h2>
+      <p class="subtitle">Champs de formulaire et éléments associés.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Champs de texte</h4>
+            <form>
+              <div class="form-group">
+                <label>Nom</label>
+                <input type="text" class="form-control" placeholder="Jean Dupont">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="jeandupont@email.com">
+              </div>
+              <div class="form-group">
+                <label>Mot de passe</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Champs avec icônes</h4>
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Nom">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Cartes -->
+    <div class="kit-section">
+      <h2>Cartes</h2>
+      <p class="subtitle">Cartes pour les villes, utilisateurs et événements.</p>
+
+      <div class="row">
+        <!-- Carte Ville -->
+        <div class="col-md-4">
+          <div class="atom-example">
+            <h4 class="atom-title">Carte Ville</h4>
+            <div class="card city-card">
+              <img src="assets/paris.gif" class="card-img-top" alt="Paris">
+              <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Paris</h5>
+                <p class="card-text text-muted"><i class="fas fa-building mr-2"></i> 12 concours</p>
+              </div>
+              <div class="card-footer bg-transparent">
+                <a href="#" class="btn btn-primary btn-block" style="background-color: #FF6B35; border: none;">Voir les concours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte Utilisateur -->
+        <div class="col-md-4">
+          <div class="atom-example">
+            <h4 class="atom-title">Carte Utilisateur</h4>
+            <div class="card user-card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="assets/avatar.avif" class="card-img rounded-circle mx-auto d-block mt-2" alt="Jeanne Dupont">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Jeanne Dupont</h5>
+                    <p class="card-text text-muted"><i class="fas fa-paint-brush mr-2"></i> 8 dessins</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte Événement -->
+        <div class="col-md-4">
+          <div class="atom-example">
+            <h4 class="atom-title">Carte Événement</h4>
+            <div class="card event-card">
+              <div class="position-relative">
+                <img src="assets/dessin paysage.jpg" class="card-img-top" alt="Concours Paysages">
+                <span class="badge badge-pill badge-primary position-absolute" style="top: 10px; left: 10px; background-color: #FF6B35;">Nouveau</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Concours : Paysages</h5>
+                <p class="card-text text-muted"><i class="fas fa-calendar-alt mr-2"></i> Date limite : 20 mai 2026</p>
+              </div>
+              <div class="card-footer bg-transparent">
+                <a href="#" class="btn btn-primary btn-block" style="background-color: #FF6B35; border: none;">Participer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Navbar et Footer -->
+    <div class="kit-section">
+      <h2>Navbar et Footer</h2>
+      <p class="subtitle">Exemples de navbar et footer pour ton site.</p>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="atom-example">
+            <h4 class="atom-title">Navbar</h4>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+              <a class="navbar-brand" href="#" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">
+                <img src="https://via.placeholder.com/30" class="d-inline-block align-top mr-2" style="width: 30px;"> Concours Dessin
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarExample">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Concours</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Soumettre un dessin</a></li>
+                </ul>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Rechercher">
+                  <button class="btn btn-outline-primary my-2 my-sm-0" style="color: #FF6B35; border-color: #FF6B35;">Rechercher</button>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="atom-example">
+            <h4 class="atom-title">Footer</h4>
+            <footer class="bg-dark text-white py-4" style="border-radius: 5px;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="text-white">Accueil</a></li>
+                      <li><a href="#" class="text-white">Concours</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="text-white">Règlement</a></li>
+                      <li><a href="#" class="text-white">FAQ</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <h5>Suivez-nous</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i> Instagram</a>
+                  </div>
+                  <div class="col-md-3">
+                    <p class="text-muted">© 2026 Concours Dessin</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Bannières -->
+    <div class="kit-section">
+      <h2>Bannières</h2>
+      <p class="subtitle">Grande et petite bannière pour ton site.</p>
+
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div class="atom-example">
+            <h4 class="atom-title">Grande bannière (Hero)</h4>
+            <div class="jumbotron jumbotron-fluid" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400'); background-size: cover; background-position: center; height: 300px; border-radius: 5px;">
+              <div class="container text-center text-white">
+                <h1 class="display-4" style="font-family: 'Patrick Hand', cursive; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Participe à notre concours de dessin !</h1>
+                <p class="lead" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">Gagne des prix et expose ton talent.</p>
+                <a href="#" class="btn btn-primary btn-lg" style="background-color: #FF6B35; border: none;">Voir les concours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="atom-example">
+            <h4 class="atom-title">Petite bannière</h4>
+            <div class="py-4" style="background-color: #f8f9fa; border-radius: 5px;">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h2 class="display-5" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Soumettre un dessin</h2>
+                    <p class="lead text-muted">Partage ton talent avec le monde.</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <i class="fas fa-paint-brush fa-3x" style="color: #FF6B35;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Commentaires -->
+    <div class="kit-section">
+      <h2>Commentaires</h2>
+      <p class="subtitle">Molécule de commentaire et section complète.</p>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="atom-example">
+            <h4 class="atom-title">Molécule Commentaire</h4>
+            <div class="media">
+              <img src="https://via.placeholder.com/60" class="mr-3 rounded-circle" alt="Jean Dupont"
+                style="width: 50px; height: 50px; object-fit: cover;">
+              <div class="media-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h5 class="mt-0">Jean Dupont</h5>
+                  <small class="text-muted">Il y a 2 heures</small>
+                </div>
+                <p class="mb-1">
+                  Super concours ! J'adore le thème des paysages. Je vais essayer de participer avec un dessin de montagne.
+                </p>
+                <div class="d-flex">
+                  <a href="#" class="text-muted mr-3" style="font-size: 0.9rem;">
+                    <i class="fas fa-reply mr-1"></i> Répondre
+                  </a>
+                  <a href="#" class="text-muted" style="font-size: 0.9rem;">
+                    <i class="fas fa-heart mr-1"></i> 5
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section : Autres éléments -->
+    <div class="kit-section">
+      <h2>Autres éléments</h2>
+      <p class="subtitle">Badges, alertes, et autres atomes utiles.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Badges</h4>
+            <span class="badge badge-pill badge-primary mr-2" style="background-color: #FF6B35;">Nouveau</span>
+            <span class="badge badge-pill badge-secondary mr-2">En cours</span>
+            <span class="badge badge-pill badge-success mr-2">Terminé</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="atom-example">
+            <h4 class="atom-title">Alertes</h4>
+            <div class="alert alert-primary" role="alert" style="background-color: rgba(255, 107, 53, 0.1); border-color: #FF6B35; color: #FF6B35;">
+              <i class="fas fa-info-circle mr-2"></i> Informations importantes !
+            </div>
+            <div class="alert alert-success" role="alert">
+              <i class="fas fa-check-circle mr-2"></i> Succès ! Votre dessin a été soumis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

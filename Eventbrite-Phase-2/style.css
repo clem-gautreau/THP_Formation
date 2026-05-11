@@ -1,0 +1,683 @@
+/* =============================================
+   1. RESET ET VARIABLES GLOBALES
+   ============================================= */
+
+/* Reset des marges/paddings par défaut (optionnel mais utile) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pour que width/height incluent padding/border */
+}
+
+/* Variables CSS pour les couleurs et polices (si tu utilises CSS moderne) */
+:root {
+  --primary-color: #FF6B35; /* Orange vif */
+  --secondary-color: #4A4A4A; /* Gris foncé */
+  --light-color: #F8F9FA; /* Gris clair */
+  --font-title: 'Patrick Hand', cursive;
+  --font-text: 'Open Sans', sans-serif;
+}
+
+/* =============================================
+   2. POLICES (GOOGLE FONTS)
+   ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans:wght@400;600&display=swap');
+
+/* =============================================
+   3. STYLES GLOBAUX (BODY, LIENS, ETC.)
+   ============================================= */
+body {
+  font-family: var(--font-text);
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: darken(var(--primary-color), 10%); /* Assombrit la couleur au survol */
+}
+
+/* =============================================
+   4. STYLES POUR LA NAVBAR
+   ============================================= */
+.navbar {
+  background-color: white !important; /* Fond blanc pour contraster avec Sketchy */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--primary-color) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Logo circulaire */
+  border: 1px solid var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--font-text);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  color: var(--secondary-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Style pour le bouton Connexion/Inscription */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Style pour la grande bannière */
+.jumbotron {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 2rem;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.jumbotron h1 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+  transition: all 0.3s;
+}
+
+/* Style pour la petite bannière */
+.page-banner {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.page-banner h1 {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-banner p {
+  color: #4A4A4A;
+  font-size: 1.2rem;
+}
+
+.page-banner i {
+  color: #FF6B35;
+  font-size: 3rem;
+}
+
+/* Style pour les formulaires d'authentification */
+.auth-card {
+  max-width: 450px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card .card-body {
+  padding: 2rem;
+}
+
+.auth-card .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth-card .form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+}
+
+.auth-card .form-control:focus {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+.auth-card .input-group-text {
+  background-color: #f8f9fa;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ced4da;
+  border-right: none;
+}
+
+.auth-card .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.auth-card .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+.auth-card .text-muted {
+  font-size: 0.9rem;
+}
+
+.auth-card a {
+  color: #FF6B35 !important;
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+/* Style pour la page de ressource */
+.resource-container {
+  padding: 3rem 0;
+}
+
+.resource-container img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.resource-container h1 {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  margin-bottom: 0.5rem;
+}
+
+.resource-container .lead {
+  font-size: 1.2rem;
+  color: #4A4A4A;
+}
+
+.resource-container .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.resource-container .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resource-container .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.resource-container .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+.resource-container .text-primary {
+  color: #FF6B35 !important;
+}
+
+.resource-container .btn-outline-primary {
+  color: #FF6B35;
+  border-color: #FF6B35;
+}
+
+.resource-container .btn-outline-primary:hover {
+  background-color: #FF6B35;
+  color: white;
+}
+
+/* Style pour les sections texte + image */
+.element-section {
+  padding: 3rem 0;
+}
+
+.element-section .row {
+  margin-bottom: 3rem;
+}
+
+.element-section img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.element-section h2 {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  margin-bottom: 1rem;
+}
+
+.element-section .lead {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-bottom: 1.5rem;
+}
+
+.element-section .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.element-section .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+/* Style pour le footer */
+footer {
+  background-color: #2C3E50 !important; /* Bleu foncé */
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FF6B35; /* Orange au survol */
+}
+
+footer h5 {
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 1rem;
+  color: #FF6B35;
+}
+
+/* Style pour la molécule commentaire */
+.comment {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.comment img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #FF6B35;
+}
+
+.comment .media-body {
+  padding: 0.5rem;
+}
+
+.comment h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 0.25rem;
+}
+
+.comment small {
+  color: #7F8C8D;
+  font-size: 0.85rem;
+}
+
+.comment p {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+}
+
+.comment a {
+  color: #FF6B35 !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.comment a:hover {
+  text-decoration: underline;
+  color: #e65c2a !important;
+}
+
+/* Style pour la section commentaires */
+.comments-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comments-section h2 {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.comments-section .badge {
+  background-color: #FF6B35;
+  font-size: 0.9rem;
+}
+
+.comments-list {
+  margin-bottom: 2rem;
+}
+
+.comments-list .media {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.comments-list .media:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.comments-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #FF6B35;
+}
+
+.comments-list h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 0.25rem;
+}
+
+.comments-list small {
+  color: #7F8C8D;
+  font-size: 0.85rem;
+}
+
+.comments-list p {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+}
+
+.comments-list a {
+  color: #FF6B35 !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.comments-list a:hover {
+  text-decoration: underline;
+  color: #e65c2a !important;
+}
+
+/* Style pour le formulaire de commentaire */
+.comments-section .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+.comments-section .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.comments-section .form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.comments-section .form-control:focus {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+.comments-section .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.comments-section .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+/* Style pour la carte Ville */
+.city-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #FF6B35;
+}
+
+.city-card .card-body {
+  padding: 1.25rem;
+}
+
+.city-card .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.city-card .card-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  font-size: 1rem;
+}
+
+.city-card .card-footer {
+  padding: 0 1.25rem 1.25rem;
+  border-top: none;
+}
+
+.city-card .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.city-card .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+/* Style pour la carte Utilisateur */
+.user-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.5rem;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-card .card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #FF6B35;
+  margin-top: 1rem;
+}
+
+.user-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-card .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-card .card-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+}
+
+.user-card .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  align-self: flex-start;
+  transition: all 0.3s;
+}
+
+.user-card .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}
+
+/* Style pour la carte Événement */
+.event-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card .badge {
+  background-color: #FF6B35;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.event-card .card-body {
+  padding: 1.25rem;
+}
+
+.event-card .card-title {
+  font-family: 'Patrick Hand', cursive;
+  color: #FF6B35;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.event-card .card-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  font-size: 0.95rem;
+}
+
+.event-card .card-footer {
+  padding: 0 1.25rem 1.25rem;
+  border-top: none;
+}
+
+.event-card .btn-primary {
+  background-color: #FF6B35;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.event-card .btn-primary:hover {
+  background-color: #e65c2a;
+  transform: translateY(-2px);
+}

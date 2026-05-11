@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organismes - Kit UI Concours Dessin</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Thème Sketchy -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Ton CSS global -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Styles spécifiques pour cette page -->
+  <style>
+    .section-title {
+      font-family: 'Patrick Hand', cursive;
+      color: #FF6B35;
+      border-bottom: 2px solid #FF6B35;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .organism-example {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: #7F8C8D;
+    }
+
+    /* Style pour les onglets des formulaires */
+    .auth-card .nav-tabs .nav-link {
+      color: #4A4A4A;
+      font-weight: 600;
+    }
+
+    .auth-card .nav-tabs .nav-link.active {
+      color: #FF6B35;
+      border-bottom-color: #FF6B35;
+    }
+
+    .auth-card .nav-tabs {
+      border-bottom: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar de la page organisms.html -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="font-family: 'Patrick Hand', cursive; color: #FF6B35; font-size: 1.8rem;">
+        <i class="fas fa-puzzle-piece mr-2"></i> Organismes
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1 class="text-center mb-5" style="font-family: 'Patrick Hand', cursive; color: #FF6B35; font-size: 2.5rem;">
+      Organismes
+    </h1>
+
+    <!-- ========== SECTION : NAVBAR ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Navbar</h2>
+      <div id="navbar-container" class="loading">
+        <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+      </div>
+    </div>
+
+    <!-- ========== SECTION : FOOTER ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Footer</h2>
+      <div id="footer-container" class="loading">
+        <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+      </div>
+    </div>
+
+    <!-- ========== SECTION : BANNIÈRES ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Bannières</h2>
+
+      <!-- Grande bannière -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h4 class="mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Grande bannière (Hero)</h4>
+          <div id="banner-large-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+
+      <!-- Petite bannière -->
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Petite bannière</h4>
+          <div id="banner-small-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION : FORMULAIRES D'AUTHENTIFICATION ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Formulaires d'authentification</h2>
+
+      <div class="row">
+        <!-- Formulaire de connexion/inscription -->
+        <div class="col-md-6 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Connexion / Inscription</h4>
+          <div id="auth-form-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+
+        <!-- Formulaire "Mot de passe oublié" -->
+        <div class="col-md-6 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Mot de passe oublié</h4>
+          <div id="auth-pwd-lost-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Formulaire de soumission -->
+        <div class="col-md-12 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Soumission d'un dessin</h4>
+          <div id="auth-sub-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION : SECTION COMMENTAIRES ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Section Commentaires</h2>
+      <div id="comments-section-container" class="loading">
+        <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+      </div>
+    </div>
+
+    <!-- ========== SECTION : PRÉSENTATION D'UNE RESSOURCE ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Présentation d'une ressource</h2>
+      <div id="resource-container" class="loading">
+        <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+      </div>
+    </div>
+
+    <!-- ========== SECTION : SECTION "TEXTE + IMAGE" ========== -->
+    <div class="organism-example">
+      <h2 class="section-title">Section "Texte + Image"</h2>
+      <div id="element-section-container" class="loading">
+        <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+      </div>
+    </div>
+  </div>
+
+  <!-- Lien vers l'index -->
+  <div class="text-center my-5">
+    <a href="index.html" class="btn btn-primary" style="background-color: #FF6B35; border: none;">
+      <i class="fas fa-arrow-left mr-2"></i> Retour à l'accueil
+    </a>
+  </div>
+
+  <!-- ========== SCRIPT POUR CHARGER LES ORGANISMES ========== -->
+  <script>
+    // Fonction pour charger du HTML dans un conteneur
+    async function loadHTML(filePath, containerId) {
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) {
+          throw new Error(`Erreur : ${response.status} - ${response.statusText}`);
+        }
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+      } catch (error) {
+        console.error("Erreur lors du chargement du fichier :", error);
+        document.getElementById(containerId).innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            Erreur : Impossible de charger le fichier <strong>${filePath}</strong>.
+          </div>
+        `;
+      }
+    }
+
+    // Charge tous les organismes au chargement de la page
+    document.addEventListener('DOMContentLoaded', () => {
+      // Organismes de base
+      loadHTML('organisms/navbar.html', 'navbar-container');
+      loadHTML('organisms/footer.html', 'footer-container');
+      loadHTML('organisms/banner-large.html', 'banner-large-container');
+      loadHTML('organisms/banner-small.html', 'banner-small-container');
+      loadHTML('organisms/comments_section.html', 'comments-section-container');
+      loadHTML('organisms/resource.html', 'resource-container');
+      loadHTML('organisms/element_section.html', 'element-section-container');
+
+      // Formulaires d'authentification
+      loadHTML('organisms/auth_form.html', 'auth-form-container');
+      loadHTML('organisms/auth_pwd_lost.html', 'auth-pwd-lost-container');
+      loadHTML('organisms/auth_sub.html', 'auth-sub-container');
+    });
+  </script>
+
+  <!-- Scripts JS pour Bootstrap (nécessaires pour les onglets, modales, etc.) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

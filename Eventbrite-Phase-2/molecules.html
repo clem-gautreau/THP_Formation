@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molécules - Kit UI Concours Dessin</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Thème Sketchy -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Ton CSS global -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Styles spécifiques pour cette page -->
+  <style>
+    .section-title {
+      font-family: 'Patrick Hand', cursive;
+      color: #FF6B35;
+      border-bottom: 2px solid #FF6B35;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .molecule-example {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: #7F8C8D;
+    }
+
+    /* Style pour les cartes */
+    .molecule-example .card {
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar de la page molecules.html -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="font-family: 'Patrick Hand', cursive; color: #FF6B35; font-size: 1.8rem;">
+        <i class="fas fa-layer-group mr-2"></i> Molécules
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1 class="text-center mb-5" style="font-family: 'Patrick Hand', cursive; color: #FF6B35; font-size: 2.5rem;">
+      Molécules
+    </h1>
+
+    <!-- ========== SECTION : CARTES ========== -->
+    <div class="molecule-example">
+      <h2 class="section-title">Cartes</h2>
+      <div class="row">
+        <!-- Carte Ville -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Carte Ville</h4>
+          <div id="city-card-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+
+        <!-- Carte Utilisateur -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Carte Utilisateur</h4>
+          <div id="user-card-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+
+        <!-- Carte Événement -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Carte Événement</h4>
+          <div id="event-card-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION : COMMENTAIRES ========== -->
+    <div class="molecule-example">
+      <h2 class="section-title">Commentaires</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h4 class="text-center mb-3" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #2C3E50;">Molécule Commentaire</h4>
+          <div id="comment-container" class="loading">
+            <i class="fas fa-spinner fa-spin mr-2"></i> Chargement...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lien vers l'index -->
+  <div class="text-center my-5">
+    <a href="index.html" class="btn btn-primary" style="background-color: #FF6B35; border: none;">
+      <i class="fas fa-arrow-left mr-2"></i> Retour à l'accueil
+    </a>
+  </div>
+
+  <!-- ========== SCRIPT POUR CHARGER LES MOLÉCULES ========== -->
+  <script>
+    // Fonction pour charger du HTML dans un conteneur
+    async function loadHTML(filePath, containerId) {
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) {
+          throw new Error(`Erreur : ${response.status} - ${response.statusText}`);
+        }
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+      } catch (error) {
+        console.error("Erreur lors du chargement du fichier :", error);
+        document.getElementById(containerId).innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            Erreur : Impossible de charger le fichier <strong>${filePath}</strong>.
+          </div>
+        `;
+      }
+    }
+
+    // Charge toutes les molécules au chargement de la page
+    document.addEventListener('DOMContentLoaded', () => {
+      // Cartes
+      loadHTML('molecules/city_card.html', 'city-card-container');
+      loadHTML('molecules/user_card.html', 'user-card-container');
+      loadHTML('molecules/event_card.html', 'event-card-container');
+
+      // Commentaires
+      loadHTML('molecules/comment.html', 'comment-container');
+    });
+  </script>
+
+  <!-- Scripts JS pour Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

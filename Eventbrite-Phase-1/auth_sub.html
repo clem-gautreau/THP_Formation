@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'authentification - Concours Dessin</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Thème Sketchy -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Ton CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <!-- Formulaire de connexion -->
+<div class="card shadow">
+  <div class="card-body p-4">
+    <!-- En-tête -->
+    <div class="text-center mb-4">
+      <h2 class="card-title" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Connexion</h2>
+      <p class="text-muted">Connecte-toi pour participer aux concours.</p>
+    </div>
+
+    <!-- Formulaire d'inscription -->
+<div class="card shadow">
+  <div class="card-body p-4">
+    <div class="text-center mb-4">
+      <h2 class="card-title" style="font-family: 'Patrick Hand', cursive; color: #FF6B35;">Inscription</h2>
+      <p class="text-muted">Rejoins notre communauté d'artistes !</p>
+    </div>
+
+    <form>
+      <!-- Champ Nom -->
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <input type="text" class="form-control" id="name" placeholder="Jean Dupont" required>
+        </div>
+      </div>
+
+      <!-- Champ Email -->
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          </div>
+          <input type="email" class="form-control" id="email" placeholder="ton@email.com" required>
+        </div>
+      </div>
+
+      <!-- Champ Mot de passe -->
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          </div>
+          <input type="password" class="form-control" id="password" placeholder="Crée un mot de passe" required>
+        </div>
+      </div>
+
+      <!-- Champ Confirmation du mot de passe -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirmer le mot de passe</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          </div>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme ton mot de passe" required>
+        </div>
+      </div>
+
+      <!-- Checkbox pour accepter les règles -->
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="acceptRules" required>
+        <label class="form-check-label" for="acceptRules">
+          J'accepte les <a href="#" style="color: #FF6B35;">règles du concours</a>.
+        </label>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <button type="submit" class="btn btn-primary btn-block" style="background-color: #FF6B35; border: none; font-weight: bold;">
+        S'inscrire
+      </button>
+
+      <!-- Lien vers la connexion -->
+      <div class="text-center mt-3">
+        <p class="text-muted mb-0">Déjà un compte ?</p>
+        <a href="#" class="text-primary" style="color: #FF6B35 !important;">Se connecter</a>
+      </div>
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
